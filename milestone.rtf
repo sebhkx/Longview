@@ -1,0 +1,239 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .SFNS-Semibold;\f1\fnil\fcharset0 .SFNS-Regular;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f4\fswiss\fcharset0 Helvetica;\f5\froman\fcharset0 TimesNewRomanPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c6700\c6700\c6700;\cssrgb\c100000\c14913\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14660\viewh19440\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs34 \cf2 Phase 1 \'97 Core Window & Image Management
+\f1\b0\fs28 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 1. Window basics (done in your current code)
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Right-aligned windows\
+	\'95	1:1 pixel scaling for images\
+	\'95	Scrollable for tall images\
+	\'95	Multiple windows supported\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 2. Window behavior enhancements
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Title bar
+\f1\b0 : set window title to file name\
+	\'95	
+\f2\b Window buttons
+\f1\b0 : make sure close, minimize, zoom buttons are enabled (
+\f3 .titled
+\f1 , 
+\f3 .closable
+\f1 , 
+\f3 .miniaturizable
+\f1 , 
+\f3 .resizable
+\f1 )\
+	\'95	
+\f2\b Window activation
+\f1\b0 : ensure new windows come to front (
+\f3 makeKeyAndOrderFront
+\f1 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 
+\f4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \
+
+\f0\b\fs34 Phase 2 \'97 Menu Bar & App Menu
+\f1\b0\fs28 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b File menu
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Open\'85 (
+\f3 \uc0\u8984 O
+\f1 ) \uc0\u8594  opens new image window\
+	\'95	Close (
+\f3 \uc0\u8984 W
+\f1 ) \uc0\u8594  closes current window\
+	\'95	Quit (
+\f3 \uc0\u8984 Q
+\f1 ) \uc0\u8594  closes all windows\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Edit menu (optional for now)
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Copy, paste, rotate (later)\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Window menu
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	List of all open windows for easy switching\
+	\'95	Minimize/zoom management\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 
+\f4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \
+
+\f0\b\fs34 Phase 3 \'97 Window & Image Interactions
+\f1\b0\fs28 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Zooming / scaling
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	1:1 pixel by default\
+	\'95	Fit-to-window option\
+	\'95	Optional pinch-to-zoom gestures\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Scrolling
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Already done with 
+\f3 NSScrollView
+\f1 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Keyboard navigation
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Arrow keys for multi-page images/screenshots (if you implement multi-image)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 
+\f4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \
+
+\f0\b\fs34 Phase 4 \'97 File Metadata & Display
+\f1\b0\fs28 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Display 
+\f2\b file name
+\f1\b0  in window title (already suggested)\
+	\'95	Optional: file path in status bar or window subtitle\
+	\'95	Optional: image dimensions in window (width \'d7 height pixels)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 
+\f4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \
+
+\f0\b\fs34 Phase 5 \'97 Advanced Functionality
+\f1\b0\fs28 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Thumbnail / sidebar preview
+\f1\b0  for multiple images\
+	\'95	
+\f2\b Drag & drop
+\f1\b0 : open images by dropping them onto app or window\
+	\'95	
+\f2\b Multiple formats support
+\f1\b0 : HEIC, GIF, TIFF, PSD, RAW\'85\
+	\'95	
+\f2\b Editing features (optional later)
+\f1\b0 : rotate, crop, annotate\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 \
+\
+
+\f4\fs48 \cb3 Reverse crop (horizontal & vertical stitch)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \cb1 \
+iphone:\
+AI stitch ?\
+\
+
+\f0\b\fs34 Phase 6 \'97 Polishing UX
+\f1\b0\fs28 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f2\b Remember window positions
+\f1\b0  between launches\
+	\'95	
+\f2\b Snap to screen edges
+\f1\b0 \
+	\'95	
+\f2\b Full screen support
+\f1\b0 \
+	\'95	
+\f2\b Retina scaling awareness
+\f1\b0 : ensure pixel-perfect display on all displays\
+	\'95	
+\f2\b Smooth scrolling for very large images
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \
+
+\f1 \uc0\u11835 
+\f4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \
+
+\f0\b\fs34 Suggested architecture
+\f1\b0\fs28 \
+\pard\tqr\tx260\tx420\li420\fi-420\sl324\slmult1\sb240\partightenfactor0
+
+\f5 \cf2 	1.	
+\f2\b AppDelegate.swift
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	File picker, menu bar, global state\
+\pard\tqr\tx260\tx420\li420\fi-420\sl324\slmult1\sb240\partightenfactor0
+
+\f5 \cf2 	2.	
+\f2\b ImageWindowController.swift
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	NSWindow management\
+	\'95	Window size/placement, right-aligned, top-edge alignment\
+\pard\tqr\tx260\tx420\li420\fi-420\sl324\slmult1\sb240\partightenfactor0
+
+\f5 \cf2 	3.	
+\f2\b ImageViewController.swift
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Scrollable NSImageView\
+	\'95	Scaling options\
+\pard\tqr\tx260\tx420\li420\fi-420\sl324\slmult1\sb240\partightenfactor0
+
+\f5 \cf2 	4.	
+\f2\b Optional helper classes
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	WindowManager \uc0\u8594  track open windows, manage Window menu\
+	\'95	ImageModel \uc0\u8594  store file info, metadata, paths\
+}
